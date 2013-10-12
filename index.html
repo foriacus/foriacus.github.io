@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="generator" content="nico 0.4.4" />
+  <title>发现自己</title>
+  <link rel="stylesheet" href="./static/main.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="alternate" type="application/rss+xml" href="feed.xml" title="发现自己" />
+  <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" id="seajsnode"></script>
+  <script>
+  seajs.config({
+    alias: {
+      '$': 'gallery/jquery/1.7.2/jquery'
+    }
+  });
+  </script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="./static/html5shiv.js"></script>
+  <style>
+  .notice{
+      padding: 3px 0;
+      text-align: center;
+      background: #BF0000;
+      color: #fff;
+  }
+  .notice a{
+      color: #fff;
+  }
+  </style>
+  <script>
+  seajs.use('$', function($) {
+    $(function(){
+      $('<div></div>')
+        .html(
+          '您的浏览器为 IE' + $.browser.version + '，请升级到高级浏览器。' +
+          '<a href="http://www.google.cn/intl/zh-CN/chrome/browser/" target="_blank">chrome</a> / ' +
+          '<a href="http://firefox.com.cn/" target="_blank">firefox</a> / ' +
+          '<a href="http://windows.microsoft.com/zh-CN/internet-explorer/downloads/ie" target="_blank">IE9</a>'
+        )
+        .addClass('notice')
+        .prependTo(document.body)
+        .hide()
+        .fadeIn(2000);
+    });
+  });
+  </script>
+  <![endif]-->
+  </head>
+  <body>
+
+  
+<style>
+html,body{
+  height:100%;
+  min-height:750px;
+}
+.danbo {
+  display: block;
+  position: relative;	
+  /*background: #E2B21A;*/
+  /*background: rgb(187,74,70);*/
+  margin-bottom: 10px;
+  margin: 0 auto;
+}
+.danbo-eye{
+  display: block;
+  position: absolute;
+  width: 12%;
+  height: 18%;
+  background: #000;
+  border-radius: 100%;
+  top: 30%;
+}
+.danbo-lefteye{
+  left: 25%;	
+}
+.danbo-righteye{
+  right:25%;
+}
+.danbo-mouth{
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  width: 0;
+  height: 0;
+}
+
+.danbo-512 .danbo-mouth{
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+  border-bottom: 48px solid black;
+  margin-left: -32px;
+}
+.index{
+  position:relative;
+  margin: 0 auto;
+  width: 800px;
+  padding:20px 0;
+}
+.index-links{
+  text-align:center;
+  padding-top: 30px;
+}
+.index-links a{
+  font-size:30px;
+  margin-right:25px;
+}
+.index-links a:last-child{
+  margin-right:0;
+}
+.index-links a:hover{
+  text-decoration:none;
+  border-bottom: 5px solid #BF0000;
+  color:#BF0000;
+}
+.index-logo{
+  text-align:center;
+  margin-bottom:40px;
+}
+.copyright{
+  text-align: center;
+}
+.links {
+  display: none;
+}
+</style>
+<div class="index">
+  <div class="index-logo">
+    <a class="logo" href="/">
+      <img src="/static/logo.png" alt="vilabels" />
+    </a>
+  </div>
+  <div class="danbo-ctn">
+    <div class="danbo" style="text-align:center">
+      <!-- <span class="danbo-eye"></span> -->
+
+        <img src="/static/lianpu.png" width="375">
+
+<!--       <span class="danbo-eye danbo-lefteye"></span>
+      <span class="danbo-eye danbo-righteye"></span>
+      <span class="danbo-mouth"></span> -->
+    </div>
+  </div>
+  <div class="index-links">
+    <a href="/archive/">Archive</a>
+    <a href="/about/">About</a>
+  </div>
+</div>
+
+ 
+ <footer>
+  <ul class="links">
+    <li><a href="https://github.com/Vissr/" target="_blank">Github</a></li>
+    <li><a href="http://twitter.com/vissviews/" target="_blank">Twitter</a></li>
+    <!-- <li><a href="http://flickr.com/popomore/" target="_blank">Flickr</a></li> -->
+  </ul>
+  <div class="copyright">
+    © 2008-2013 All Rights Reserved<br/>
+    Powered by <a href="http://lab.lepture.com/nico/" target="_blank">nico 0.4.4</a>, 
+    Owned by <a href="http://twitter.com/vweixiao" target="_blank">vweixiao</a>, 
+  </div>
+</footer>
+ <script type="text/javascript">
+  if (!(/\d+\.\d+\.\d+\.\d+/g.test(location.hostname))) {
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5515443-4']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.' + 'google-analytics.m/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  }
+  </script>
+</body>
+</html>
