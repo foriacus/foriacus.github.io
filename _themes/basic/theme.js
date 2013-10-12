@@ -3,8 +3,8 @@ exports.name = 'basic';
 exports.version = '0.7';
 
 exports.author = {
-    'name': 'popomore',
-    'website': 'http://chuo.me',
+    'name': 'foria',
+    'website': 'http://jilij.in',
 };
 
 exports.navigation = [
@@ -16,9 +16,9 @@ exports.reveal = {
   'style': 'default'
 };
 
-exports.twitter = 'popomore';
+exports.twitter = 'huikouren';
 
-exports.disqus = 'chuome';
+exports.disqus = 'juanjuan';
 
 exports.filters = {
   reveal: function (content) {
