@@ -1,3 +1,12 @@
+# Javascript 学习路线图
+
+- pubdate: 2013-08-09
+
+A leanring roadmap of Javascript inspired by cowboy's training schedule.
+
+-----------
+
+
 # Understanding JavaScript
 
 

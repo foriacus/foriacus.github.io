@@ -5,6 +5,61 @@
   <link href="http://jilij.in" />
   <id>http://jilij.in</id>
   <entry>
+    <title type="html"><![CDATA[Javascript 学习路线图]]></title>
+    <link href="http://jilij.in/2013/08/roadmap.html"/>
+    <published>2013-08-09T00:00:00.000Z</published>
+    <updated>2013-08-09T00:00:00.000Z</updated>
+    <id>http://jilij.in/2013/08/roadmap.html</id>
+    <content type="html" xml:base="http://jilij.in" xml:lang="en">
+      <![CDATA[ <h1 id="understanding-javascript">Understanding JavaScript</h1><ul>
+<li>JavaScript Isn&#39;t Just in the Browser</li>
+<li>Debugging with console</li>
+<li>Variables and Identifiers</li>
+<li>Statements</li>
+<li>Error Handling and Debugging</li>
+<li>Primitive Types</li>
+<li>Objects</li>
+<li>Objects as Namespaces</li>
+<li>Arrays</li>
+<li>Functions</li>
+<li>Scoping and Hoisting</li>
+<li>Immediately Invoked Function Expressions</li>
+<li>The Module Pattern</li>
+<li>Method chaining</li>
+<li>Dates</li>
+<li>Regular Expressions</li>
+<li>Coercion and Comparison</li>
+<li>The typeof Operator</li>
+<li>The instanceof Operator</li>
+<li>Other Operators</li>
+<li>Operator Precedence</li>
+<li>Eval</li>
+<li>Timers</li>
+<li>Automatic Semicolon Insertion</li>
+<li>JSON: JavaScript Object Notation</li>
+<li>Instances and Inheritance</li>
+<li>Creating objects with the Module Pattern</li>
+<li>Creating objects with Constructors and Prototypes</li>
+<li>Prototypal Inheritance</li>
+<li>Browser JavaScript</li>
+<li>The window Object</li>
+<li>Browser History</li>
+<li><p>The Document Object Model (DOM)</p>
+<p>Document, Nodes,Live and Static NodeLists, Elements (Selecting, Creating, Manipulating), DocumentFragment, Traversing the DOM, TreeWalker, The Event Object, Event Bubbling and Capturing, Delegation and Custom Events.</p>
+</li>
+<li>Events</li>
+</ul>
+<h2 id="in-addition-these-topics-will-be-addressed">In addition, these topics will be addressed:</h2><ul>
+<li>JSLint / JSHint</li>
+<li>Minification</li>
+<li>Unit testing</li>
+<li>Documentation</li>
+<li>Coding style</li>
+<li>Performance</li>
+</ul>
+]]>
+    </content>
+  </entry><entry>
     <title type="html"><![CDATA[Backbone 笔试题]]></title>
     <link href="http://jilij.in/2013/08/backbone-quiz.html"/>
     <published>2013-08-02T00:00:00.000Z</published>
