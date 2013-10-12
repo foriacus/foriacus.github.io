@@ -1,0 +1,20 @@
+{
+  "site": {
+    "name": "连心焕娟",
+    "url": "http://jilij.in"
+  },
+  "source": "content",
+  "output": "_site",
+  "theme": "_themes/basic",
+  "permalink": "{{pubdate.year}}/{{pubdate.month}}/{{filename}}.html",
+  "writers": [
+    "nico.PostWriter",
+    "nico.PageWriter",
+    "nico.FileWriter",
+    "nico.StaticWriter",
+    "nico.ArchiveWriter",
+    "nico.FeedWriter"
+  ],
+  "perpage": 30,
+  "archive_output": "archive/index.html"
+}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block head -%}
+{%- endblock %}
+
+{%- block main %}
+<style>
+body {background:#fff;}
+.demo {border: none; padding: 50px 0; width: 800px;margin:0 auto;}
+</style>
+<div class="demo markdown">
+    {{ post.content }}
+</div>
+{% endblock -%}
+
+{% block foot -%}
+{%- endblock %}
+

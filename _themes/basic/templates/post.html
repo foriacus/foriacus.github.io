@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}{{post.title}} - {{config.site.name}}{% endblock %}
+{% block description %}{% if post.summay %}{{post.summary}}{% endif %}{% endblock %}
+{% block main -%}
+<div class="container">
+  <article class="markdown">
+  <h1>{{ post.title }}</h1>
+  <span class="datetime">{{ post.pubdate | formatDate }}</span>
+  {{ post.html }}
+  {%- include "snippet/disqus.html" %}
+  </article>
+</div>
+{%- endblock %}
