@@ -125,13 +125,14 @@ inherit(Pet, Animal);</pre><p>简单的分析的源码我们知道，在执行<c
 ]]>
     </content>
   </entry><entry>
-    <title type="html"><![CDATA[Backbone 笔试题]]></title>
+    <title type="html"><![CDATA[Backbone 和 CSS 笔试面试题目]]></title>
     <link href="http://jilij.in/2013/08/backbone-quiz.html"/>
     <published>2013-08-02T00:00:00.000Z</published>
     <updated>2013-08-02T00:00:00.000Z</updated>
     <id>http://jilij.in/2013/08/backbone-quiz.html</id>
     <content type="html" xml:base="http://jilij.in" xml:lang="en">
-      <![CDATA[ <h1 id="part-i">PART I</h1><h2 id="backbone">BACKBONE</h2><h4 id="1-backbone唯一硬依赖的工具库是：">1. Backbone唯一硬依赖的工具库是：</h4><p><code>A. underscore</code>  </p>
+      <![CDATA[ <p>公司要求对新进待转正员工进行技术考核，前端开发工程师要考的当然是js和css这些东西了。由于组内使用最多的框架是Backbone，我被要求出5道关于Backbone的题目，另外加上5道CSS的。对于组内的弟兄怎么能为难他们呢，因此这些题目都很简单。Backbone的题目是受Google工程师AddyOsmani的电子书<a href="http://addyosmani.github.com/backbone-fundamentals/">Developing Backbone.js Applications</a>的启发。</p>
+<h2 id="backbone">BACKBONE</h2><h4 id="1-backbone硬依赖的工具库可以有以下哪些完成：">1. Backbone硬依赖的工具库可以有以下哪些完成：</h4><p><code>A. underscore</code>  </p>
 <p><code>B. lodash</code></p>
 <p><code>C. jquery</code></p>
 <p><code>D. zepto</code></p>
@@ -153,7 +154,7 @@ inherit(Pet, Animal);</pre><p>简单的分析的源码我们知道，在执行<c
 <p><code>B. var myTodoRouter = new TodoRouter();</code></p>
 <p><code>C. Backbone.history.start()</code></p>
 <p><code>D. Backbone.navigate(&#39;/&#39;, {trigger: true})</code></p>
-<h1 id="part-ii">PART II</h1><h2 id="css">CSS</h2><h4 id="1-下面哪一句话描述的是通过行内样式把css添加到网页中？">1. 下面哪一句话描述的是通过行内样式把CSS添加到网页中？</h4><p><code>A. CSS样式放在HTML文档的head元素中</code></p>
+<h2 id="css">CSS</h2><h4 id="1-下面哪一句话描述的是通过行内样式把css添加到网页中？">1. 下面哪一句话描述的是通过行内样式把CSS添加到网页中？</h4><p><code>A. CSS样式放在HTML文档的head元素中</code></p>
 <p><code>B. CSS样式写在特定HTML标签的style属性中</code></p>
 <p><code>C. 在HTML页面中通过link标签引入</code></p>
 <p><code>D. 通过@import指令来加载CSS</code></p>
