@@ -11,7 +11,7 @@
     <updated>2013-09-19T00:00:00.000Z</updated>
     <id>http://jilij.in/2013/09/component的inherits实现.html</id>
     <content type="html" xml:base="http://jilij.in" xml:lang="en">
-      <![CDATA[ <h1 id="component的inherits">component的inherits</h1><p>component是活跃开发者及express框架作者TJ主导的一个前端模块化开发框架，前端颗粒可以小到indexof方法，大到样式复杂的UI组件。在阅读inhertis模块代码时，又重新理解了原形继承的概念。</p>
+      <![CDATA[ <p>component是nodejs活跃开发者及express框架作者TJ主导的一个前端模块化开发框架，前端颗粒可以小到indexof方法，大到样式复杂的UI组件。在阅读inhertis模块代码时，又重新理解了原形继承的概念。</p>
 <p>源码是这样的：</p>
 <pre>module.exports = function(a, b){
   var fn = function(){};
