@@ -69,13 +69,14 @@ inherit(Pet, Animal);</pre><p>简单的分析的源码我们知道，在执行<c
 &lt;/html&gt;</pre>]]>
     </content>
   </entry><entry>
-    <title type="html"><![CDATA[Javascript 学习路线图]]></title>
+    <title type="html"><![CDATA[Javascript learning roadmap]]></title>
     <link href="http://jilij.in/2013/08/roadmap.html"/>
     <published>2013-08-09T00:00:00.000Z</published>
     <updated>2013-08-09T00:00:00.000Z</updated>
     <id>http://jilij.in/2013/08/roadmap.html</id>
     <content type="html" xml:base="http://jilij.in" xml:lang="en">
-      <![CDATA[ <h1 id="understanding-javascript">Understanding JavaScript</h1><ul>
+      <![CDATA[ <h1 id="understanding-javascript">Understanding JavaScript</h1><p>A leanring roadmap of Javascript inspired by cowboy&#39;s training schedule.</p>
+<ul>
 <li>JavaScript Isn&#39;t Just in the Browser</li>
 <li>Debugging with console</li>
 <li>Variables and Identifiers</li>
