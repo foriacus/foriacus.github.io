@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="generator" content="nico 0.4.7" />
+  <title>components的inherits实现 - 连心焕娟</title>
+  <link rel="stylesheet" href="../../static/main.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="alternate" type="application/rss+xml" href="../../feed.xml" title="连心焕娟" />
+  <script src="http://static.alipayobjects.com/seajs/1.2.1/sea.js" id="seajsnode"></script>
+  <script>
+  seajs.config({
+    alias: {
+      '$': 'gallery/jquery/1.7.2/jquery'
+    }
+  });
+  </script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../static/html5shiv.js"></script>
+  <style>
+  .notice{
+      padding: 3px 0;
+      text-align: center;
+      background: #BF0000;
+      color: #fff;
+  }
+  .notice a{
+      color: #fff;
+  }
+  </style>
+  <script>
+  seajs.use('$', function($) {
+    $(function(){
+      $('<div></div>')
+        .html(
+          '您的浏览器为 IE' + $.browser.version + '，请升级到高级浏览器。' +
+          '<a href="http://www.google.cn/intl/zh-CN/chrome/browser/" target="_blank">chrome</a> / ' +
+          '<a href="http://firefox.com.cn/" target="_blank">firefox</a> / ' +
+          '<a href="http://windows.microsoft.com/zh-CN/internet-explorer/downloads/ie" target="_blank">IE9</a>'
+        )
+        .addClass('notice')
+        .prependTo(document.body)
+        .hide()
+        .fadeIn(2000);
+    });
+  });
+  </script>
+  <![endif]-->
+  </head>
+  <body>
+ <header>
+  <a href="/feed.xml" class="rss">
+    <img src="/static/rss.png" alt="rss">
+  </a>
+  <a class="logo" href="/">
+    <img src="/static/logo.jpg" alt="chuo.me" />
+    ♨
+  </a>
+  <nav id="nav" role="navigation">
+    
+
+    <a href="/about/">About</a>
+
+    <a href="/archive/">Archive</a>
+  </nav>
+</header>
+ 
+<div class="container">
+  <article class="markdown">
+  <h1>components的inherits实现</h1>
+  <span class="datetime">2013-09-19</span>
+  <h1 id="components的inherits实现">components的inherits实现</h1><p>components是活跃开发者及express框架作者TJ主导的一个前端模块化开发框架，前端颗粒可以小到indexof方法，大到样式复杂的UI组件。在阅读inhertis模块代码时，又重新理解了原形继承的概念。</p>
+<p>源码是这样的：</p>
+<pre>module.exports = function(a, b){
+  var fn = function(){};
+  fn.prototype = b.prototype;
+  a.prototype = new fn;
+  a.prototype.constructor = a;
+};</pre><p>Example:</p>
+<pre>var inherit = require(&#39;inherit&#39;);
+function Animal() {}
+function Pet() {}
+inherit(Pet, Animal);</pre><p>简单的分析的源码我们知道，在执行<code>a.prototype = new fn;</code>后，a的实例的constructor已成为b，而不是a，要解决这个问题，就要执行<code>a.prototype.constructor = a;</code>,重新绑定a的构造函数。但是即使是这样，a仍然失去了自己原本的原型，而全部被b的原型取代。所以components的inherts方法是有局限性的。Pet伪类可以继承Animal是可以，但是前提是Pet也只能作为一个空对象。</p>
+<pre>&lt;!Doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;测试页面&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script&gt;      
+            function inherits(a, b) { 
+                var Fn = function() {};
+                Fn.prototype = b.prototype;
+                //此处重新定义函数a的prototype
+                a.prototype = new Fn;
+                a.prototype.constructor = a;
+            }
+
+            function Person(name) {
+                this.name = name;
+            }
+
+            Person.prototype.getName = function() { 
+                return this.name; 
+            }
+
+            var p = new Person(&#39;Jack&#39;)
+
+            //alert(p.constructor === Person);
+            //alert(Person.prototype.constructor === Person);
+
+            function Teacher(name) {
+                this.name = name
+            }
+
+            Teacher.prototype.teach = function () {
+                return &#39;please speak follow me&#39;;
+            }
+
+            inherits(Teacher, Person);
+            var xiaoming = new Teacher(&#39;xiaoming&#39;);
+            alert(xiaoming.constructor === Teacher);  //true
+            alert(xiaoming.hasOwnProperty(&#39;teach&#39;));  //false 
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre><div id="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_shortname = 'juanjuan';
+  var disqus_title = 'components的inherits实现';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+  </script>
+  </article>
+</div>
+
+ <footer>
+  <ul class="links">
+    <li><a href="https://github.com/foriacus/" target="_blank">Github</a></li>
+    <li><a href="http://twitter.com/huikouren/" target="_blank">Twitter</a></li>
+  </ul>
+  <div class="copyright">
+    © 2008-2013 <a href="http://jilij.in/" title="连心 | Don&#039;t to be stupid" rel="home" target="_blank">jilij.in</a> All Rights Reserved<br/>
+    Powered by <a href="http://lab.lepture.com/nico/" target="_blank">nico 0.4.7</a>, 
+    Owned by <a href="http://twitter.com/huikouren" target="_blank">连心</a>, 
+  </div>
+</footer>
+ <script type="text/javascript">
+  if (!(/\d+\.\d+\.\d+\.\d+/g.test(location.hostname))) {
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5515443-4']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.' + 'google-analytics.m/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  }
+  </script>
+</body>
+</html>
