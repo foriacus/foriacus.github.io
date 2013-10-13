@@ -75,7 +75,7 @@ inherit(Pet, Animal);</pre><p>简单的分析的源码我们知道，在执行<c
     <updated>2013-08-09T00:00:00.000Z</updated>
     <id>http://jilij.in/2013/08/roadmap.html</id>
     <content type="html" xml:base="http://jilij.in" xml:lang="en">
-      <![CDATA[ <h1 id="understanding-javascript">Understanding JavaScript</h1><p>A leanring roadmap of Javascript inspired by cowboy&#39;s training schedule.</p>
+      <![CDATA[ <p>This is a leanring roadmap of Javascript inspired by cowboy&#39;s training schedule.</p>
 <ul>
 <li>JavaScript Isn&#39;t Just in the Browser</li>
 <li>Debugging with console</li>
