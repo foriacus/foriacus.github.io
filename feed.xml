@@ -69,7 +69,7 @@ inherit(Pet, Animal);</pre><p>简单的分析的源码我们知道，在执行<c
 &lt;/html&gt;</pre>]]>
     </content>
   </entry><entry>
-    <title type="html"><![CDATA[Javascript learning roadmap]]></title>
+    <title type="html"><![CDATA[Javascript 学习路线图]]></title>
     <link href="http://jilij.in/2013/08/roadmap.html"/>
     <published>2013-08-09T00:00:00.000Z</published>
     <updated>2013-08-09T00:00:00.000Z</updated>
